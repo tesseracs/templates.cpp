@@ -1,4 +1,5 @@
 #!/bin/sh
 set -e
-g++ -std=c++17 -Wall -Wextra -O2 -o main main.cpp math_utils.cpp
-./main
+mkdir -p build
+g++ -std=c++17 -Wall -Wextra -Wpedantic -O2 -Iinclude src/main.cpp src/task.cpp src/release_plan.cpp -o build/main
+./build/main

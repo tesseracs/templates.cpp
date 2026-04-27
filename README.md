@@ -6,6 +6,22 @@ Clone URL: `https://github.com/tesseracs/templates.cpp`
 
 ## Layout
 
-- `main.cpp` — entry; includes `math_utils.h` and calls `math::add`.
-- `math_utils.h` / `math_utils.cpp` — header + implementation (link both in `run.sh`).
-- `run.sh` — compiles `main.cpp` and `math_utils.cpp`, then runs the binary.
+- `src/main.cpp` — entry point that builds a small release plan and prints a summary.
+- `include/task.h` / `src/task.cpp` — a simple domain type with behavior.
+- `include/release_plan.h` / `src/release_plan.cpp` — higher-level orchestration and formatting.
+- `run.sh` — compiles the project into `build/` and runs it.
+
+## Run
+
+```sh
+./run.sh
+```
+
+## Why this shape?
+
+This template stays easy to run but feels closer to a real C++ starter:
+
+- separate headers and implementation files
+- a small namespace instead of free-floating helpers
+- value types, encapsulation, and STL containers
+- a tiny but practical example domain
